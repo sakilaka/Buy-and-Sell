@@ -1,6 +1,28 @@
 [
     {
         "company": "YAMAHA",
+        "product1" :{
+            "picture": "https://i.ibb.co/qs4hg33/r15.jpg",
+            "name": "Yamaha R15 V4",
+            "location": "Chittagong",
+            "resalePrice": 500000,
+            "orginalPrice": 600000,
+            "used": "4 days",
+            "date": "3/3/2020",
+            "sellerName": "kamrul",
+            "verifiedSeller": "Yes"
+        },
+        "product2" : {
+            "picture": "https://i.ibb.co/bHng8VD/fzs.jpg",
+            "name": "Yamaha FZS V3",
+            "location": "Dhaka",
+            "resalePrice": 200000,
+            "orginalPrice": 280000,
+            "used": "47 days",
+            "date": "3/3/2020",
+            "sellerName": "kamrul",
+            "verifiedSeller": "No"
+        },
         "img": "https://i.ibb.co/yRQ8n7N/yamaha.jpg",
         "description": "From Longman Dictionary of Contemporary EnglishYam‧a‧ha /jæməh/ trademark a large Japanese company known especially for making motorcycles, sports equipment, and musical instruments, especially electronic keyboards. Quizzes.Yamaha Motor Co Ltd (Yamaha Motor) is an automobile company. The company manufactures and markets motorcycles, marine products, Robotics; Financial services; and other components."
     },
@@ -8,31 +30,53 @@
         "company": "SUZUKI",
         "img": "https://i.ibb.co/vxcLkMV/suzuki.png",
         "product1" :{
-            "picture": "https://unsplash.com/s/photos/gym",
-            "name": "dumble",
-            "location": "20s",
-            "resalePrice": 4,
-            "orginalPrice": 4,
-            "used": "4 days",
+            "picture": "https://i.ibb.co/n1yJDzL/gixxer.jpg",
+            "name": "Suzuki Gixxer",
+            "location": "Noakhali",
+            "resalePrice": 130000,
+            "orginalPrice": 220000,
+            "used": "45 days",
             "date": "3/3/2020",
-            "sellerName": "kamrul",
-            "verifiedSeller": "kamrul"
+            "sellerName": "sakil",
+            "verifiedSeller": "No"
         },
         "product2" : {
-            "picture": "https://unsplash.com/s/photos/gym",
-            "name": "dumble",
-            "location": "20s",
-            "resalePrice": 4,
-            "orginalPrice": 4,
-            "used": "4 days",
+            "picture": "https://i.ibb.co/FhMPSm4/gsxr.jpg",
+            "name": "Suzuki Gsxr",
+            "location": "Dhaka",
+            "resalePrice": 280000,
+            "orginalPrice": 350000,
+            "used": "46 days",
             "date": "3/3/2020",
-            "sellerName": "kamrul",
-            "verifiedSeller": "kamrul"
+            "sellerName": "sabbir",
+            "verifiedSeller": "Yes"
         },
         "description": "Suzuki manufactures automobiles, motorcycles, all-terrain vehicles (ATVs), outboard marine engines, wheelchairs and a variety of other small internal combustion engines. In 2016, Suzuki was the eleventh biggest automaker by production worldwide."
     },
     {
         "company": "TVS",
+        "product1" :{
+            "picture": "https://i.ibb.co/x7yZXtW/4v.jpg",
+            "name": "Apache RTR 4V",
+            "location": "Dhaka",
+            "resalePrice": 150000,
+            "orginalPrice": 22000,
+            "used": "4 days",
+            "date": "3/4/2020",
+            "sellerName": "kamrul",
+            "verifiedSeller": "Yes"
+        },
+        "product2" : {
+            "picture": "https://i.ibb.co/CtkDHdK/rtr.jpg",
+            "name": "Apache RTR 2V",
+            "location": "Chittagong",
+            "resalePrice": 90000,
+            "orginalPrice": 150000,
+            "used": "4 days",
+            "date": "7/3/2020",
+            "sellerName": "kamrul",
+            "verifiedSeller": "Yes"
+        },
         "img": "https://i.ibb.co/DzygxKk/Tvs.png",
         "description": "TVS Motor Company the flagship company of the USD 8.5 billion TVS Group & is the third largest two-wheeler manufacturer in India and one among the top ten in the world, reported a revenue of Rs.TVS stands for Thirukkurungudi Vengaram Sundram. Thirukkurungudi Vengaram Sundram Iyengar was the founder of the TVS group. So the name TVS comes from his initial name Thirukkurungudi Vengaram Sundram. TVS is one of the largest manufacturers of motorcycles, mopeds and auto rickshaws in India."
     }

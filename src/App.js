@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Home from './component/Home/Home';
+import Product from './component/Product';
 import Main from './Layout/Main';
 
 function App() {
@@ -20,11 +21,11 @@ function App() {
         //   // loader: ({ params }) => fetch(`http://localhost:5000/cetegories/${params.id}`)
 
         // },
-        // {
-        //   path: '/cetegories/:id',
-        //   element: <PrivetRoute><CategorieID /></PrivetRoute>,
-        //   loader: ({ params }) => fetch(`http://localhost:5000/cetegories/${params.id}`)
-        // },
+        {
+          path: '/category/:id',
+          element: <Product></Product>,
+          loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+        },
         // {
         //   path: '/blog',
         //   element: <Blog />
@@ -46,14 +47,14 @@ function App() {
         //   element: <PrivetRoute><Pement /></PrivetRoute>
         // },
 
-        // {
-        //   path: '/register',
-        //   element: <Register></Register>
-        // },
-        // {
-        //   path: '/login',
-        //   element: <Login></Login>
-        // }
+        {
+          path: '/register',
+          element: <Register></Register>
+        },
+        {
+          path: '/login',
+          element: <Login></Login>
+        }
 
       ]
     },
