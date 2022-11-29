@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthUserContext } from '../Context/AuthContext';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthUserContext);
+    
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
     return (
         <div>
             <div className="navbar p-6 bg-base-100">
@@ -22,8 +30,17 @@ const Header = () => {
                                     <li><Link>Submenu 2</Link></li>
                                 </ul>
                             </li>
-                            <li><Link to='/login'>login</Link></li>
-                            <li><Link to='/register'>Register</Link></li>
+                            {
+                                user?.uid ?
+                                    <li><Link to=''><button onClick={handleLogOut}>Sign Out</button></Link></li>
+                                    :
+                                    <>
+                                        <li><Link to='/login'>login</Link></li>
+
+                                        <li><Link to='/register'>Register</Link></li>
+                                    </>
+
+                            }
                         </ul>
                     </div>
                     <Link className="btn btn-ghost normal-case text-xl">Bike Zone</Link>
@@ -41,8 +58,17 @@ const Header = () => {
                                 <li><Link>Submenu 2</Link></li>
                             </ul>
                         </li>
-                        <li><Link to='/login'>login</Link></li>
-                        <li><Link to='/register'>Register</Link></li>
+                        {
+                            user?.uid ?
+                                <li><Link to=''><button onClick={handleLogOut}>Sign Out</button></Link></li>
+                                :
+                                <>
+                                    <li><Link to='/login'>login</Link></li>
+
+                                    <li><Link to='/register'>Register</Link></li>
+                                </>
+
+                        }
                     </ul>
                 </div>
                 {/* <div className="navbar-end">
