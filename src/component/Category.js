@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Category = ({category}) => {
-    const {_id, company, img, description} = category;
+const Category = ({ category, setBuyItem }) => {
+    const { _id, company, img, description } = category;
     return (
         <div>
             <div className="card w-96 bg-gradient-to-tr from-indigo-400 to-white text-primary-content">
