@@ -22,7 +22,8 @@ const Header = () => {
                                     <li><Link>Submenu 2</Link></li>
                                 </ul>
                             </li>
-                            <li><Link>Item 3</Link></li>
+                            <li><Link to='/login'>login</Link></li>
+                            <li><Link to='/register'>Register</Link></li>
                         </ul>
                     </div>
                     <Link className="btn btn-ghost normal-case text-xl">Bike Zone</Link>
@@ -40,7 +41,8 @@ const Header = () => {
                                 <li><Link>Submenu 2</Link></li>
                             </ul>
                         </li>
-                        <li><Link>Item 3</Link></li>
+                        <li><Link to='/login'>login</Link></li>
+                        <li><Link to='/register'>Register</Link></li>
                     </ul>
                 </div>
                 {/* <div className="navbar-end">

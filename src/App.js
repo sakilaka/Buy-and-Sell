@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Home from './component/Home/Home';
 import Product from './component/Product';
+import Register from './component/Register';
+import Login from './component/Login';
 import Main from './Layout/Main';
 
 function App() {
