@@ -1,13 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useState } from 'react';
 import bike1 from '../../Images/R1M2.jpeg';
 import Category from '../Category';
 
 const Home = () => {
     const { data: categories = [], isLoading } = useQuery({
         queryKey: ['category'],
-        queryFn: () => fetch('http://localhost:5000/category').then(res => res.json())
+        queryFn: () => fetch('https://second-hand-server-nine.vercel.app/category').then(res => res.json())
     })
+    
     if(isLoading){
         return <h2 className='text-red-400 text-5xl font-bold my-20 text-center'>Loading...</h2>
     }

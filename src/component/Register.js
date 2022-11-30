@@ -53,7 +53,7 @@ const Register = () => {
         const users = { name, email, type, photoURL }
         console.log(users);
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://second-hand-server-nine.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

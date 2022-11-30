@@ -48,21 +48,6 @@ const Login = () => {
                     email : user.email
                 }
                 console.log(currentUser);
-
-                //get gwt token
-                // fetch('https://cloud-kitchen-server-six.vercel.app/jwt', {
-                //     method:"POST",
-                //     headers: {
-                //         'content-type': 'application/json'
-                //     },
-                //     body: JSON.stringify(currentUser)
-                // })
-                // .then(res => res.json())
-                // .then(data =>{
-                //     console.log(data);
-                //     localStorage.setItem('cloud-token', data.token);
-                //     navigate(from, { replace: true })
-                // })
             })
             .catch(error => {
                 console.log(error)

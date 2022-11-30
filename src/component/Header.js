@@ -3,24 +3,24 @@ import { Link } from 'react-router-dom';
 import { AuthUserContext } from '../Context/AuthContext';
 
 const Header = () => {
-    const [loadUser, setLoadUser] = useState([]);
     const { user, logOut } = useContext(AuthUserContext);
-
+    
     const handleLogOut = () => {
         logOut()
-            .then(() => { })
-            .catch(error => console.log(error))
+        .then(() => { })
+        .catch(error => console.log(error))
     }
+    
+    // const [loadUser, setLoadUser] = useState([]);
+    // useEffect(() => {
 
-    useEffect(() => {
-
-        fetch('http://localhost:5000/users')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data[0]);
-                setLoadUser(data[0])
-            })
-    }, [])
+    //     fetch('https://second-hand-server-nine.vercel.app/users')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data[0]);
+    //             setLoadUser(data[0])
+    //         })
+    // }, [])
 
     return (
         <div>
@@ -31,16 +31,17 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><Link to='home'>Home</Link></li>
                             <li><Link to='blog'>Blog </Link></li>
                             <li tabIndex={0}>
-                                <Link className="justify-between">
+                                <Link to='dashboard' className="justify-between">
                                     DashBoard
-                                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+
                                 </Link>
-                                <ul className="p-2">
+                                {/* <ul className="p-2">
                                     {
                                         loadUser.type === "Seller" &&
-                                        <li><Link>Add a Product</Link></li>
+                                        <li><Link to='/addProduct'>Add a Product</Link></li>
                                     }
                                     {
                                         loadUser.type === "Buyer" &&
@@ -53,7 +54,7 @@ const Header = () => {
                                             <li><Link>All Seller</Link></li>
                                         </>
                                     }
-                                </ul>
+                                </ul> */}
                             </li>
                             {
                                 user?.uid ?
@@ -70,18 +71,24 @@ const Header = () => {
                     </div>
                     <Link className="btn btn-ghost normal-case text-xl">Bike Zone</Link>
                 </div>
+                <div className='navbar-end'>
+                    <label htmlFor='dashboard-drawer' tabIndex={1} className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
+                        <li><Link to='/home'>Home</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
                         <li tabIndex={0}>
-                            <Link>
+                            <Link to='/dashboard'>
                                 DashBoard
-                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+
                             </Link>
-                            <ul className="p-2">
+                            {/* <ul className="p-2">
                                 {
                                     loadUser.type === "Seller" &&
-                                    <li><Link>Add a Product</Link></li>
+                                    <li><Link to='/addProduct'>Add a Product</Link></li>
                                 }
                                 {
                                     loadUser.type === "Buyer" &&
@@ -94,7 +101,7 @@ const Header = () => {
                                         <li><Link>All Seller</Link></li>
                                     </>
                                 }
-                            </ul>
+                            </ul> */}
                         </li>
                         {
                             user?.uid ?
@@ -109,9 +116,7 @@ const Header = () => {
                         }
                     </ul>
                 </div>
-                {/* <div className="navbar-end">
-                    <Link className="btn">Get started</Link>
-                </div> */}
+
             </div>
         </div>
     );

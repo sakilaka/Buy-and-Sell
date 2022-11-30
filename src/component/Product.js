@@ -25,7 +25,7 @@ const Product = () => {
                         <h2 className="text-lg font-semibold">Used : {product1.used}</h2>
                         <h2 className="text-lg font-semibold">Location : {product1.location}</h2>
                         <p className='text-lg font-semibold'>Verified: {product1.verifiedSeller}</p>
-                        <div className="card-actions justify-end">
+                        <div className="card-actions">
                             <label onClick={() => setBuyItem(product1)} htmlFor="buy-modal" className="btn btn-primary">Buy Now</label>
 
                         </div>
@@ -42,7 +42,7 @@ const Product = () => {
                         <h2 className="text-lg font-semibold">Used : {product2.used}</h2>
                         <h2 className="text-lg font-semibold">Location : {product2.location}</h2>
                         <p className='text-lg font-semibold'>Verified: {product2.verifiedSeller}</p>
-                        <div className="card-actions justify-end">
+                        <div className="card-actions">
                             <label onClick={() => setBuyItem(product2)} htmlFor="buy-modal" className="btn btn-primary">Buy Now</label>
                         </div>
                     </div>
