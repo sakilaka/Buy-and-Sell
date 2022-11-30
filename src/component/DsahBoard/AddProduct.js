@@ -6,7 +6,7 @@ const AddProduct = () => {
     // const navigate = useNavigate();
 
 
-
+    const time = new Date().toLocaleString();
     const handleAddProduct = (event) => {
 
         event.preventDefault();
@@ -17,7 +17,7 @@ const AddProduct = () => {
         const image = form.image?.value;
         const location = form.location?.value;
         const condition = form.condition?.value;
-        const category = form.category?.value;
+        const company = form.company?.value;
         const resalePrice = form.resalePrice?.value;
         const orginalPrice = form.orginalPrice?.value;
         const year = form.year?.value;
@@ -29,10 +29,11 @@ const AddProduct = () => {
             image,
             location,
             condition,
-            category,
+            company,
             resalePrice,
             orginalPrice,
             year,
+            time,
             number,
             description
 
@@ -40,10 +41,10 @@ const AddProduct = () => {
 
         console.log(product)
 
-        fetch('https://second-hand-server-nine.vercel.app/addProduct', {
-            method: 'POST',
+        fetch('http://localhost:5000/category', {
+            method: 'PUT',
             headers: {
-                'Content-Type': 'application/json',
+                'content-Type': 'application/json',
             },
             body: JSON.stringify(product),
         })
@@ -72,7 +73,7 @@ const AddProduct = () => {
             <h2 className='text-green-400 text-center font-bold my-10 text-4xl'>Add a Product</h2>
             <div className="hero">
 
-                <form onSubmit={handleAddProduct} className="card w-7/12 p-10 shadow-2xl bg-slate-300">
+                <form onSubmit={handleAddProduct} className="card mb-10 lg:w-7/12 w-full p-10 shadow-2xl bg-slate-300">
                     <div className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -123,9 +124,15 @@ const AddProduct = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">category </span>
+                                <span className="label-text">company </span>
                             </label>
-                            <input name='category' type="text" placeholder="category " className="input input-bordered" />
+                            {/* <input name='company' type="text" placeholder="company " className="input input-bordered" /> */}
+                            <select name='company' className="select select-bordered w-full">
+                                <option disabled selected>Select company</option>
+                                <option value='YAMAHA'>YAMAHA</option>
+                                <option value='TVS'>TVS</option>
+                                <option value='SUZUKI'>SUZUKI</option>
+                            </select>
                         </div>
                         <div className="form-control">
                             <label className="label">

@@ -6,10 +6,11 @@ import Register from './component/Register';
 import Login from './component/Login';
 import Main from './Layout/Main';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
-import AddProduct from './component/AddProduct';
+import AddProduct from './component/DsahBoard/AddProduct';
 import DashboardLayout from './Layout/DashboardLayout';
-import Dashboard from './component/DsahBoard/Dashboard';
 import ErrorPage from './component/ErrorPage';
+import Blog from './component/Blog';
+import MyProduct from './component/DsahBoard/MyProduct';
 
 function App() {
   const router = createBrowserRouter([
@@ -31,14 +32,11 @@ function App() {
           element: <PrivateRoute><Product></Product></PrivateRoute>,
           loader: ({ params }) => fetch(`https://second-hand-server-nine.vercel.app/category/${params.id}`)
         },
-        // {
-        //   path: '/blog',
-        //   element: <Blog />
-        // },
         {
-          path: '/addProduct',
-          element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
+          path: '/blog',
+          element: <Blog />
         },
+       
         // {
         //   path: '/myProduct',
         //   element: <PrivetRoute><MyProduct /></PrivetRoute>
@@ -46,10 +44,6 @@ function App() {
         // {
         //   path: '/myOrder',
         //   element: <PrivetRoute><MyOrder /></PrivetRoute>
-        // },
-        // {
-        //   path: '/pement',
-        //   element: <PrivetRoute><Pement /></PrivetRoute>
         // },
 
         {
@@ -69,8 +63,12 @@ function App() {
       errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
-          path: '/dashboard',
-          element: <Dashboard></Dashboard>
+          path: '/dashboard/addProduct',
+          element: <AddProduct></AddProduct>
+        },
+        {
+          path: '/dashboard/myProducts',
+          element: <MyProduct></MyProduct>
         },
         // {
         //   path: '/dasboard/allBooking',
