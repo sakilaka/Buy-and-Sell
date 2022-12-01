@@ -38,23 +38,7 @@ const Header = () => {
                                     DashBoard
 
                                 </Link>
-                                {/* <ul className="p-2">
-                                    {
-                                        loadUser.type === "Seller" &&
-                                        <li><Link to='/addProduct'>Add a Product</Link></li>
-                                    }
-                                    {
-                                        loadUser.type === "Buyer" &&
-                                        <li><Link>My Orders</Link></li>
-                                    }
-                                    {
-                                        loadUser.type === "Admin" &&
-                                        <>
-                                            <li><Link>All Buyer</Link></li>
-                                            <li><Link>All Seller</Link></li>
-                                        </>
-                                    }
-                                </ul> */}
+                              
                             </li>
                             {
                                 user?.uid ?
@@ -85,23 +69,7 @@ const Header = () => {
                                 DashBoard
 
                             </Link>
-                            {/* <ul className="p-2">
-                                {
-                                    loadUser.type === "Seller" &&
-                                    <li><Link to='/addProduct'>Add a Product</Link></li>
-                                }
-                                {
-                                    loadUser.type === "Buyer" &&
-                                    <li><Link>My Orders</Link></li>
-                                }
-                                {
-                                    loadUser.type === "Admin" &&
-                                    <>
-                                        <li><Link>All Buyer</Link></li>
-                                        <li><Link>All Seller</Link></li>
-                                    </>
-                                }
-                            </ul> */}
+                          
                         </li>
                         {
                             user?.uid ?

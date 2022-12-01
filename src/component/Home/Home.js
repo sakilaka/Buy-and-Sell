@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import bike1 from '../../Images/R1M2.jpeg';
+import AdsCard from '../AdsCard';
 import Category from '../Category';
 
 const Home = () => {
@@ -10,10 +11,10 @@ const Home = () => {
 
     const { data: advertise = [] } = useQuery({
         queryKey: ['advertise'],
-        queryFn: () => fetch('https://second-hand-server-nine.vercel.app/advertise').then(res => res.json())
+        queryFn: () => fetch('http://localhost:5000/advertise').then(res => res.json())
     })
-    
-    if(isLoading){
+
+    if (isLoading) {
         return <h2 className='text-red-400 text-5xl font-bold my-20 text-center'>Loading...</h2>
     }
     return (
@@ -31,7 +32,7 @@ const Home = () => {
 
             <section className='my-10 container mx-auto'>
                 <h2 className='text-3xl font-bold text-center text-green-400'>Category Here</h2>
-                
+
                 <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20 my-10'>
                     {
                         categories.map(category => <Category
@@ -42,8 +43,17 @@ const Home = () => {
                 </div>
             </section>
 
-            <section>
+            <section className='my-10 container mx-auto'>
+                <h2 className='text-3xl font-bold text-center text-green-400'>Category Here</h2>
 
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20 my-10'>
+                    {
+                        advertise.map(ads => <AdsCard
+                            key={ads._id}
+                            ads={ads}
+                        ></AdsCard>)
+                    }
+                </div>
             </section>
 
             <section className='my-10 container mx-auto'>
