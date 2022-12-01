@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthUserContext } from '../Context/AuthContext';
 
@@ -11,16 +11,6 @@ const Header = () => {
         .catch(error => console.log(error))
     }
     
-    // const [loadUser, setLoadUser] = useState([]);
-    // useEffect(() => {
-
-    //     fetch('https://second-hand-server-nine.vercel.app/users')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data[0]);
-    //             setLoadUser(data[0])
-    //         })
-    // }, [])
 
     return (
         <div>
@@ -31,10 +21,10 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><Link to='home'>Home</Link></li>
-                            <li><Link to='blog'>Blog </Link></li>
+                            <li><Link to='/home'>Home</Link></li>
+                            <li><Link to='/blog'>Blog </Link></li>
                             <li tabIndex={0}>
-                                <Link to='dashboard' className="justify-between">
+                                <Link to='/dashboard' className="justify-between">
                                     DashBoard
 
                                 </Link>
@@ -67,7 +57,6 @@ const Header = () => {
                         <li tabIndex={0}>
                             <Link to='/dashboard'>
                                 DashBoard
-
                             </Link>
                           
                         </li>

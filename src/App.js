@@ -14,6 +14,7 @@ import MyProduct from './component/DsahBoard/MyProduct';
 import AllSeller from './component/DsahBoard/AllSeller';
 import AllBuyer from './component/DsahBoard/AllBuyer';
 import Dashboard from './component/DsahBoard/Dashboard';
+import MyWishList from './component/DsahBoard/MyWishList';
 
 function App() {
   const router = createBrowserRouter([
@@ -76,6 +77,10 @@ function App() {
         {
           path: '/dashboard/allBuyer',
           element: <AllBuyer></AllBuyer>
+        },
+        {
+          path: '/dashboard/wishList',
+          element: <MyWishList></MyWishList>
         },
       ]
     }

@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### live site link
+(https://buy-and-sell-fca13.web.app)
+
+
+### site name
+**Bike Zone**
+
+### Framework use
+**This project i use tailwind CSS.Beacuse there are lot of component.I also used Daisy UI for better look.**
+
+### what is the purpose of this site?
+
+**The main purpose of this project is BUY and SELL.Here you get new and second hand bike.So it is very helpful for you.**
+
+### What i feel by doing this project?
+ **I am feeling so much good,,,i find many arror and solve by me without any help..and finally i am done this project so i feel good.**

@@ -4,9 +4,9 @@ import Header from '../component/Header';
 import { AuthUserContext } from '../Context/AuthContext';
 
 const DashboardLayout = () => {
-    const [loadUser, setLoadUser] = useState([]);
-
     const {user} = useContext(AuthUserContext);
+    
+    const [loadUser, setLoadUser] = useState([]);
 
     useEffect(() => {
 
@@ -39,7 +39,11 @@ const DashboardLayout = () => {
                         }
                         {
                             loadUser?.type === "Buyer" &&
+                            <>
                             <li><Link>My Orders</Link></li>
+                            <li><Link to='/dashboard/wishList'>My WishList</Link></li>
+                            
+                            </>
                         }
                         {
                             loadUser?.type === "Admin" &&
