@@ -21,10 +21,11 @@ const Product = () => {
                         <div className="card-body">
                             <h2 className="card-title font-bold my-2">{product.name}</h2>
                             <h2 className="text-xl font-semibold">SellerName : {product.sellerName}</h2>
-                            <h2 className="text-lg font-semibold">Date : {product.date}</h2>
+                            <h2 className="text-lg font-semibold">Date : {product.time}</h2>
                             <h2 className="text-lg font-semibold">ResalePrice : ${product.resalePrice}</h2>
                             <h2 className="text-lg font-semibold">OrginalPrice : ${product.orginalPrice}</h2>
-                            <h2 className="text-lg font-semibold">Used : {product.used}</h2>
+                            <h2 className="text-lg font-semibold">Year of Purchase : ${product.yearOfPurchase}</h2>
+                            <h2 className="text-lg font-semibold">Number : {product.number}</h2>
                             <h2 className="text-lg font-semibold">Location : {product.location}</h2>
                             <p className='text-lg font-semibold'>Verified: {product.verifiedSeller}</p>
                             <div className="card-actions">

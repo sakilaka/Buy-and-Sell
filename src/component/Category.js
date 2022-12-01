@@ -11,7 +11,7 @@ const Category = ({ category, setBuyItem }) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{company}</h2>
-                    <p>{description.slice(0, 200) + "..."}</p>
+                    <p>{description?.slice(0, 200) + "..."}</p>
                     <div className="card-actions justify-center">
                         <Link to={`/category/${_id}`}><button className="btn btn-error">See Bike</button></Link>
                     </div>

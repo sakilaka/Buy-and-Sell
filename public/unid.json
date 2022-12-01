@@ -8,8 +8,10 @@
                 "location": "Chittagong",
                 "resalePrice": 500000,
                 "orginalPrice": 600000,
-                "used": "4 days",
-                "date": "3/3/2020",
+                "condition": "good",
+                "number": 9378345,
+                "time": "3/3/2020",
+                "yearOfPurchase": 2021,
                 "sellerName": "kamrul",
                 "verifiedSeller": "Yes"
             },
@@ -19,8 +21,10 @@
                 "location": "Dhaka",
                 "resalePrice": 200000,
                 "orginalPrice": 280000,
-                "used": "47 days",
-                "date": "3/3/2020",
+                "condition": "fair",
+                "number": 6456457,
+                "time": "3/3/2020",
+                "yearOfPurchase": 2021,
                 "sellerName": "kamrul",
                 "verifiedSeller": "No"
             }
@@ -38,8 +42,10 @@
                 "location": "Noakhali",
                 "resalePrice": 130000,
                 "orginalPrice": 220000,
-                "used": "45 days",
-                "date": "3/3/2020",
+                "condition": "good",
+                "number": 334534,
+                "time": "3/3/2020",
+                "yearOfPurchase": 2021,
                 "sellerName": "sakil",
                 "verifiedSeller": "No"
             },
@@ -49,8 +55,10 @@
                 "location": "Dhaka",
                 "resalePrice": 280000,
                 "orginalPrice": 350000,
-                "used": "46 days",
-                "date": "3/3/2020",
+                "condition": "good",
+                "time": "3/3/2020",
+                "yearOfPurchase": 2021,
+                "number": 65657,
                 "sellerName": "sabbir",
                 "verifiedSeller": "Yes"
             }
@@ -66,8 +74,10 @@
                 "location": "Dhaka",
                 "resalePrice": 150000,
                 "orginalPrice": 22000,
-                "used": "4 days",
-                "date": "3/4/2020",
+                "condition": "fair",
+                "time": "3/4/2020",
+                "yearOfPurchase": 2021,
+                "number": 6456457,
                 "sellerName": "kamrul",
                 "verifiedSeller": "Yes"
             },
@@ -77,8 +87,10 @@
                 "location": "Chittagong",
                 "resalePrice": 90000,
                 "orginalPrice": 150000,
-                "used": "4 days",
-                "date": "7/3/2020",
+                "condition": "fair",
+                "time": "7/3/2020",
+                "number": 45469,
+                "yearOfPurchase": 2021,
                 "sellerName": "kamrul",
                 "verifiedSeller": "Yes"
             }

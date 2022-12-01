@@ -13,6 +13,7 @@ import Blog from './component/Blog';
 import MyProduct from './component/DsahBoard/MyProduct';
 import AllSeller from './component/DsahBoard/AllSeller';
 import AllBuyer from './component/DsahBoard/AllBuyer';
+import Dashboard from './component/DsahBoard/Dashboard';
 
 function App() {
   const router = createBrowserRouter([
@@ -38,15 +39,6 @@ function App() {
           path: '/blog',
           element: <Blog />
         },
-       
-        // {
-        //   path: '/myProduct',
-        //   element: <PrivetRoute><MyProduct /></PrivetRoute>
-        // },
-        // {
-        //   path: '/myOrder',
-        //   element: <PrivetRoute><MyOrder /></PrivetRoute>
-        // },
 
         {
           path: '/register',
@@ -65,6 +57,10 @@ function App() {
       errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
+          path: '/dashboard',
+          element: <Dashboard></Dashboard>
+        },
+        {
           path: '/dashboard/addProduct',
           element: <AddProduct></AddProduct>
         },
@@ -81,14 +77,6 @@ function App() {
           path: '/dashboard/allBuyer',
           element: <AllBuyer></AllBuyer>
         },
-        // {
-        //   path: '/dasboard/allBooking',
-        //   element: <AllBookinPresent></AllBookinPresent>
-        // },
-        // {
-        //   path: '/dasboard/admin',
-        //   element: <Admin></Admin>
-        // },
       ]
     }
   ]);

@@ -13,28 +13,32 @@ const AddProduct = () => {
         const form = event.target;
 
 
-        const productName = form.name?.value;
-        const image = form.image?.value;
+        const name = form.name?.value;
+        const picture = form.image?.value;
         const location = form.location?.value;
         const condition = form.condition?.value;
         const company = form.company?.value;
         const resalePrice = form.resalePrice?.value;
         const orginalPrice = form.orginalPrice?.value;
-        const year = form.year?.value;
+        const yearOfPurchase = form.year?.value;
         const number = form.number?.value;
+        const sellerName = form.seller?.value;
+        const verifiedSeller = form.verified?.value;
         const description = form.description?.value;
 
         const product = {
-            productName,
-            image,
+            productName: name,
+            picture,
             location,
             condition,
             company,
             resalePrice,
             orginalPrice,
-            year,
+            yearOfPurchase,
             time,
             number,
+            sellerName,
+            verifiedSeller,
             description
 
         }
@@ -56,7 +60,7 @@ const AddProduct = () => {
                         'Product added.'
                     )
                     event.target.reset()
-                    // navigate('/all-services')
+                    // navigate('/myproducts')
                 }
             })
             .catch(error => {
@@ -79,31 +83,31 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text">product name</span>
                             </label>
-                            <input name='name' type="text" placeholder="product name" className="input input-bordered" />
+                            <input name='name' type="text" placeholder="product name" required className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">product image</span>
                             </label>
-                            <input name='image' type="text" placeholder="product image url" className="input input-bordered" />
+                            <input name='image' type="text" placeholder="product image url" required className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">resalePrice</span>
                             </label>
-                            <input name='resalePrice' type="text" placeholder="resalePrice" className="input input-bordered" />
+                            <input name='resalePrice' type="text" placeholder="resalePrice" required className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">orginalPrice</span>
                             </label>
-                            <input name='orginalPrice' type="text" placeholder="orginalPrice" className="input input-bordered" />
+                            <input name='orginalPrice' type="text" placeholder="orginalPrice" required className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">condition</span>
                             </label>
-                            <select name='condition' className="select select-bordered w-full">
+                            <select name='condition' required className="select select-bordered w-full">
                                 <option disabled selected>Select condition</option>
                                 <option value='excellent'>excellent</option>
                                 <option value='good'>good</option>
@@ -114,20 +118,20 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text">mobile number</span>
                             </label>
-                            <input name='number' type="text" placeholder="mobile number" className="input input-bordered" />
+                            <input name='number' type="text" required placeholder="mobile number" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">location</span>
                             </label>
-                            <input name='location' type="text" placeholder="location" className="input input-bordered" />
+                            <input name='location' type="text" required placeholder="location" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">company </span>
                             </label>
                             {/* <input name='company' type="text" placeholder="company " className="input input-bordered" /> */}
-                            <select name='company' className="select select-bordered w-full">
+                            <select name='company' required className="select select-bordered w-full">
                                 <option disabled selected>Select company</option>
                                 <option value='YAMAHA'>YAMAHA</option>
                                 <option value='TVS'>TVS</option>
@@ -138,13 +142,29 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text">Year of purchase</span>
                             </label>
-                            <input name='year' type="text" placeholder="Year of purchase" className="input input-bordered" />
+                            <input name='year' required type="text" placeholder="Year of purchase" className="input input-bordered" />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Seller Name</span>
+                            </label>
+                            <input name='seller' required type="text" placeholder="Seller Name" className="input input-bordered" />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Verified</span>
+                            </label>
+                            <select name='verified' required className="select select-bordered w-full">
+                                <option disabled selected>Select</option>
+                                <option value='Yes'>Yes</option>
+                                <option value='No'>No</option>
+                            </select>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">description</span>
                             </label>
-                            <textarea name='description' className="textarea textarea-bordered" placeholder="description"></textarea>
+                            <textarea name='description' required className="textarea textarea-bordered" placeholder="description"></textarea>
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-warning">Add Product</button>
