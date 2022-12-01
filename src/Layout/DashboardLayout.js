@@ -44,8 +44,8 @@ const DashboardLayout = () => {
                         {
                             loadUser.type === "Admin" &&
                             <>
-                                <li><Link>All Buyer</Link></li>
-                                <li><Link>All Seller</Link></li>
+                                <li><Link to='/dashboard/allBuyer'>All Buyer</Link></li>
+                                <li><Link to='/dashboard/allSeller'>All Seller</Link></li>
                             </>
                         }
                     </ul>

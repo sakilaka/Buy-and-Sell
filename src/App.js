@@ -11,6 +11,8 @@ import DashboardLayout from './Layout/DashboardLayout';
 import ErrorPage from './component/ErrorPage';
 import Blog from './component/Blog';
 import MyProduct from './component/DsahBoard/MyProduct';
+import AllSeller from './component/DsahBoard/AllSeller';
+import AllBuyer from './component/DsahBoard/AllBuyer';
 
 function App() {
   const router = createBrowserRouter([
@@ -68,7 +70,16 @@ function App() {
         },
         {
           path: '/dashboard/myProducts',
-          element: <MyProduct></MyProduct>
+          element: <MyProduct></MyProduct>,
+          loader: () => fetch('https://second-hand-server-nine.vercel.app/category')
+        },
+        {
+          path: '/dashboard/allSeller',
+          element: <AllSeller></AllSeller>
+        },
+        {
+          path: '/dashboard/allBuyer',
+          element: <AllBuyer></AllBuyer>
         },
         // {
         //   path: '/dasboard/allBooking',
