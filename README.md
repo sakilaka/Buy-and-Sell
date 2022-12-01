@@ -87,3 +87,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### What i feel by doing this project?
  **I am feeling so much good,,,i find many arror and solve by me without any help..and finally i am done this project so i feel good.**
+
+#### admin details
+
+adminEmail: <admin@gmail.com>
+
+adminPassword: <123456>
