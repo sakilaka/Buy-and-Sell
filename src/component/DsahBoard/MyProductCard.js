@@ -17,7 +17,7 @@ const MyProductCard = ({ item }) => {
             price,
             location
         }
-        fetch('http://localhost:5000/advertise', {
+        fetch('https://second-hand-server-nine.vercel.app/advertise', {
             method: 'POST',
             headers: {
                 'content-Type': 'application/json',
@@ -43,7 +43,7 @@ const MyProductCard = ({ item }) => {
     return (
         <div>
             {
-                product.map(p => <div className="card lg:w-96 w-[320px] m-8 bg-base-100 shadow-xl">
+                product.map(p => <div className="card lg:w-96 w-[320px] mx-auto m-8 bg-base-100 shadow-xl">
                     <figure><img src={p.picture} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title font-bold my-2">{p.name}</h2>

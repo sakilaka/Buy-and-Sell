@@ -8,7 +8,7 @@ const AllSeller = () => {
     } = useQuery({
         queryKey: ["user"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/users`);
+            const res = await fetch(`https://second-hand-server-nine.vercel.app/users`);
             const data = await res.json();
             return data;
         },

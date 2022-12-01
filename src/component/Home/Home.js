@@ -11,7 +11,7 @@ const Home = () => {
 
     const { data: advertise = [] } = useQuery({
         queryKey: ['advertise'],
-        queryFn: () => fetch('http://localhost:5000/advertise').then(res => res.json())
+        queryFn: () => fetch('https://second-hand-server-nine.vercel.app/advertise').then(res => res.json())
     })
 
     if (isLoading) {
@@ -19,7 +19,7 @@ const Home = () => {
     }
     return (
         <div>
-            <section className='my-10 container mx-auto'>
+            <section className='my-10 container lg:p-5 p-3 mx-auto'>
                 <div className="hero min-h-screen text-white bg-gradient-to-tr from-green-600 to-blue-600">
                     <div className="hero-content text-center">
                         <div className="max-w-md">
@@ -43,20 +43,24 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='my-10 container mx-auto'>
-                <h2 className='text-3xl font-bold text-center text-green-400'>Category Here</h2>
+            {
+                advertise.length > 0 &&
 
-                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20 my-10'>
-                    {
-                        advertise.map(ads => <AdsCard
-                            key={ads._id}
-                            ads={ads}
-                        ></AdsCard>)
-                    }
-                </div>
-            </section>
+                <section className='my-10 container mx-auto'>
+                    <h2 className='text-3xl font-bold text-center text-green-400'>Advertise Products</h2>
 
-            <section className='my-10 container mx-auto'>
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20 my-10'>
+                        {
+                            advertise.map(ads => <AdsCard
+                                key={ads._id}
+                                ads={ads}
+                            ></AdsCard>)
+                        }
+                    </div>
+                </section>
+            }
+
+            <section className='my-10 lg:p-8 p-3 container mx-auto'>
                 <div className="hero min-h-screen" style={{ backgroundImage: `url('${bike1}')` }}>
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">

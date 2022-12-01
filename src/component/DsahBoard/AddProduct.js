@@ -46,7 +46,7 @@ const AddProduct = () => {
 
         console.log(product)
 
-        fetch('http://localhost:5000/category', {
+        fetch('https://second-hand-server-nine.vercel.app/category', {
             method: 'PUT',
             headers: {
                 'content-Type': 'application/json',

@@ -31,18 +31,18 @@ const DashboardLayout = () => {
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 bg-green-300 text-base-content">
                         {
-                            loadUser.type === "Seller" &&
+                            loadUser?.type === "Seller" &&
                             <>
                             <li><Link to='/dashboard/addProduct'>Add a Product</Link></li>
                             <li><Link to='/dashboard/myProducts'>My Products</Link></li>
                             </>
                         }
                         {
-                            loadUser.type === "Buyer" &&
+                            loadUser?.type === "Buyer" &&
                             <li><Link>My Orders</Link></li>
                         }
                         {
-                            loadUser.type === "Admin" &&
+                            loadUser?.type === "Admin" &&
                             <>
                                 <li><Link to='/dashboard/allBuyer'>All Buyer</Link></li>
                                 <li><Link to='/dashboard/allSeller'>All Seller</Link></li>

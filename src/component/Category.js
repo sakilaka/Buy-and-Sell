@@ -5,7 +5,7 @@ const Category = ({ category, setBuyItem }) => {
     const { _id, company, img, description } = category;
     return (
         <div>
-            <div className="card w-96 bg-gradient-to-tr from-indigo-400 to-white text-primary-content">
+            <div className="card lg:w-96 w-[350px] mx-auto bg-gradient-to-tr from-indigo-400 to-white text-primary-content">
                 <figure className="px-3 w-full h-60 pt-5">
                     <img src={img} alt="Shoes" className="rounded-xl" />
                 </figure>
