@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { getAuth, updateProfile } from 'firebase/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { getAuth, GoogleAuthProvider, updateProfile } from 'firebase/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthUserContext } from '../Context/AuthContext';
 import Swal from 'sweetalert2';
 
@@ -9,8 +9,30 @@ const Register = () => {
 
     const auth = getAuth();
     const navigate = useNavigate();
-    const { signUpWithEmailPass } = useContext(AuthUserContext);
+    const { signUpWithEmailPass, googleProviderLogin } = useContext(AuthUserContext);
     const [success, setSuccess] = useState(false);
+
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const handleGoogleLogin = () => {
+        googleProviderLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                // saveUser(user.displayName, user.email, type="Buyer");
+                Swal.fire(
+                    'successfully register.'
+                )
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
+        navigate(from, { replace: true });
+    }
 
     const handleEmailPassRegister = (event) => {
         event.preventDefault();
@@ -45,7 +67,7 @@ const Register = () => {
         })
             .then(() => {
 
-             })
+            })
             .catch(error => console.log(error));
     }
 
@@ -118,6 +140,11 @@ const Register = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-outline btn-warning">Register</button>
+                            </div>
+                            <p className='text-center'>OR</p>
+                            <hr />
+                            <div className="form-control mt-6">
+                                <button onClick={handleGoogleLogin} className="btn btn-warning">Sign in with Google</button>
                             </div>
                             <p className="text-xs my-2 sm:text-sm">
                                 Already Sign Up?please <Link className='font-bold text-purple-400' to='/login'>Login</Link>

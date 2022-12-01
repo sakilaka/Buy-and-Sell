@@ -14,7 +14,7 @@ const MyProductCard = ({item}) => {
                     <h2 className="text-lg font-semibold">Date : {p.time}</h2>
                     <h2 className="text-lg font-semibold">ResalePrice : ${p.resalePrice}</h2>
                     <h2 className="text-lg font-semibold">OrginalPrice : ${p.orginalPrice}</h2>
-                    <h2 className="text-lg font-semibold">Year of Purchase : ${p.yearOfPurchase}</h2>
+                    <h2 className="text-lg font-semibold">Year of Purchase : {p.yearOfPurchase}</h2>
                     <h2 className="text-lg font-semibold">Number : {p.number}</h2>
                     <h2 className="text-lg font-semibold">Location : {p.location}</h2>
                     <p className='text-lg font-semibold'>Verified: {p.verifiedSeller}</p>
