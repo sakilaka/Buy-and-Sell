@@ -1,9 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const AddProduct = () => {
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
 
     const time = new Date().toLocaleString();
@@ -60,12 +61,11 @@ const AddProduct = () => {
                         'Product added.'
                     )
                     event.target.reset()
-                    // navigate('/myproducts')
+                    navigate('/dashboard/myProducts')
                 }
             })
             .catch(error => {
                 console.log(error);
-                // toast.error(error)
             })
 
 

@@ -7,6 +7,11 @@ const Home = () => {
         queryKey: ['category'],
         queryFn: () => fetch('https://second-hand-server-nine.vercel.app/category').then(res => res.json())
     })
+
+    const { data: advertise = [] } = useQuery({
+        queryKey: ['advertise'],
+        queryFn: () => fetch('https://second-hand-server-nine.vercel.app/advertise').then(res => res.json())
+    })
     
     if(isLoading){
         return <h2 className='text-red-400 text-5xl font-bold my-20 text-center'>Loading...</h2>
@@ -35,6 +40,10 @@ const Home = () => {
                         ></Category>)
                     }
                 </div>
+            </section>
+
+            <section>
+
             </section>
 
             <section className='my-10 container mx-auto'>

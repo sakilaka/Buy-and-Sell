@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { getAuth, GoogleAuthProvider, updateProfile } from 'firebase/auth';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthUserContext } from '../Context/AuthContext';
 import Swal from 'sweetalert2';
 
@@ -12,8 +12,6 @@ const Register = () => {
     const { signUpWithEmailPass, googleProviderLogin } = useContext(AuthUserContext);
     const [success, setSuccess] = useState(false);
 
-    const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -22,16 +20,16 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                // saveUser(user.displayName, user.email, type="Buyer");
+                saveUser(user.displayName, user.email, user.photoURL);
                 Swal.fire(
                     'successfully register.'
                 )
+                navigate('/');
             })
             .catch(error => {
                 console.log(error);
             })
 
-        navigate(from, { replace: true });
     }
 
     const handleEmailPassRegister = (event) => {
@@ -71,7 +69,7 @@ const Register = () => {
             .catch(error => console.log(error));
     }
 
-    const saveUser = (name, email, type, photoURL) => {
+    const saveUser = (name, email, type="Buyer", photoURL) => {
         const users = { name, email, type, photoURL }
         console.log(users);
 
